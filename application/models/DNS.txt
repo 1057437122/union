@@ -1,0 +1,23 @@
+create table zone(
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`name` varchar(255) NOT NULL,
+PRIMARY KEY (`id`)
+);
+create table  dns_records (
+zone varchar (255),
+host varchar (255),
+type varchar (255),
+data varchar (255),
+ttl int(11),
+mx_priority varchar (255),
+refresh int(11),
+retry int(11),
+expire int(11),
+minimum int(11),
+serial bigint(20),
+resp_person varchar(255),
+primary_ns varchar(255),
+is_active int(1) default 1,
+id int(11) not null auto_increment,
+primary key(`id`),
+);

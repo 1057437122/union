@@ -1,0 +1,25 @@
+body{padding:20px 200px 0;}
+a{text-decoration:none;}
+.h3{height:3px;}
+.mainw{margin-left:auto;margin-right:auto;padding:20px;width:700px;border:blue solid 1px;overflow:hidden;}
+.box{overflow:hidden;}
+.label{width:130px;padding:0 2px 0;float:left;}
+.ipt{width:200px;float:left;}
+.clear{clear:both;}
+.meta{float:left;}
+.r_op{float:right;}
+.zone{padding:0 3px 0;width:90%;float:left;}
+.bk{border:1px solid gray;}
+.records{border-bottom:dashed 1px;}
+.op{padding-left:30px;}
+.lft{float:left;width:70px;padding:2px;}
+.ofh{overflow:hidden;padding:5px;}
+.loginbox{margin-left:auto;margin-right:auto;}
+.sbmt{padding-left:20px;}
+.fl{float:left;padding:0 3px 0;}
+.header{float:right;}
+.search{float:right;}
+.zones{margin-left:30px;}
+.bk{border-bottom:dashed 1px;clear:both;}
+.pre_page{float:left;}
+.nxt_page{float:right;}
