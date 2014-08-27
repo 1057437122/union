@@ -1,7 +1,9 @@
 body{padding:20px 200px 0;}
-a{text-decoration:none;}
+*{}
+a{text-decoration:none;padding:5px 0 5px;display:block;}
+a:hover{color:red;}
 .h3{height:3px;}
-.mainw{margin-left:auto;margin-right:auto;padding:20px;width:700px;border:blue solid 1px;overflow:hidden;}
+.mainw{margin-left:auto;margin-right:auto;padding:20px;width:700px;border:#D0D0D0 solid 1px;overflow:hidden;}
 .box{overflow:hidden;}
 .label{width:130px;padding:0 2px 0;float:left;}
 .ipt{width:200px;float:left;}
@@ -9,8 +11,8 @@ a{text-decoration:none;}
 .meta{float:left;}
 .r_op{float:right;}
 .zone{padding:0 3px 0;width:90%;float:left;}
-.bk{border:1px solid gray;}
-.records{border-bottom:dashed 1px;}
+.bk{}
+.records{border-bottom:dashed 1px #D0D0D0;}
 .op{padding-left:30px;}
 .lft{float:left;width:70px;padding:2px;}
 .ofh{overflow:hidden;padding:5px;}
@@ -23,3 +25,10 @@ a{text-decoration:none;}
 .bk{border-bottom:dashed 1px;clear:both;}
 .pre_page{float:left;}
 .nxt_page{float:right;}
+/* table */
+table a{display:inline;}
+table a:hover{color:red;}
+/*zone list */
+.zone {border-bottom:#D0D0D0 1px dashed;width:100%;}
+.zone .zone_name{float:left;}
+.zone .del_zone{float:right;}
