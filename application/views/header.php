@@ -13,15 +13,20 @@
 <body>
 
 <div class="mainw">
-<?php if(!isset($noshowsearch)){?>
-<div class="r_op"><a href=<?php echo $base_url.'index.php/zone/search';?>>&nbsp;&nbsp;我要搜索</a></div>
-<?php }?>
-<div class="r_op"><a href=<?php echo $base_url.'index.php/zone/chpasswd';?>>&nbsp;&nbsp;修改登录密码</a></div>
+<div class="header">
+	<div class="nav">
+		<ul>
+			<li><a href="<?php echo $base_url; ?>index.php/zone">首页</a></li>
+			<li><a href="<?php echo $base_url.'index.php/zone/chpasswd';?>">设置</a></li>
+			<li><form action="<?php echo $base_url; ?>index.php/zone/search" ><input type="text" name="zone" /><input type="submit" value="搜索" /></form></li>
+		</ul>
+	</div><!-- nav-->
+</div>
+<div class="clear"></div>
+<div class="main">
+
 <div class="header">
 
-<?php if(!isset($noshowindex)){?>
-	<div class="index"><a href=<?php echo $base_url.'index.php/zone';?>>返回首页</a></div>
-<?php }?>
 </div>
-<div  class="zones" ><?php if(isset($zone)){echo $zone;}?></div>
+<div  class="zones" >当前域名:<?php if(isset($zone)){echo $zone;}?></div>
 <div class="clear"></div>

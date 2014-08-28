@@ -1,9 +1,9 @@
 body{padding:20px 200px 0;}
-*{}
-a{text-decoration:none;padding:5px 0 5px;display:block;}
+* ul li {list-style-type:none;list-style-position:inside;}
+a{text-decoration:none;padding:5px 0 5px;display:block;color:#0d0d0d;}
 a:hover{color:red;}
 .h3{height:3px;}
-.mainw{margin-left:auto;margin-right:auto;padding:20px;width:700px;border:#D0D0D0 solid 1px;overflow:hidden;}
+.mainw{margin-left:auto;margin-right:auto;padding:20px;width:700px;border:#D0D0D0 solid 1px;overflow:hidden;background:#c0c0c0;}
 .box{overflow:hidden;}
 .label{width:130px;padding:0 2px 0;float:left;}
 .ipt{width:200px;float:left;}
@@ -21,7 +21,7 @@ a:hover{color:red;}
 .fl{float:left;padding:0 3px 0;}
 .header{float:right;}
 .search{float:right;}
-.zones{margin-left:30px;}
+
 .bk{border-bottom:dashed 1px;clear:both;}
 .pre_page{float:left;}
 .nxt_page{float:right;}
@@ -32,3 +32,14 @@ table a:hover{color:red;}
 .zone {border-bottom:#D0D0D0 1px dashed;width:100%;}
 .zone .zone_name{float:left;}
 .zone .del_zone{float:right;}
+/*header*//* search form */
+.header{margin-top:40px;}
+.header .nav{background:#d0d0d0;font-size:20px;float:right;padding-top:3px;padding-bottom:1px;}
+.header .nav ul{display:inline;overflow:hidden;margin:0;float:right;}
+.header .nav ul li{float:left;padding:2px 5px;}
+.header .nav ul li:hover{padding:2px 5px;background:#dcdcdc;}
+.header .nav ul li input{float:left;padding-top:5px;font-size:14px;}
+
+/**main **/
+.main {}
+.main .zones{padding-left:30px;padding-top:10px;font-size:20px;font-weight:bold;border-top:solid 1px grey;}
