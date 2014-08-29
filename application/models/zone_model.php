@@ -90,16 +90,16 @@ class Zone_model extends CI_Model{
 		// }
 		return $this->db->insert($this->records_table,$data);
 	}
-	public function search(){
+	public function search($cont){
 		// $data=array(
 			// 'host'=>$this->input->post('host'),
 			// 'zone'=>$this->input->post('zone'),
 		// );
 		// $host=$this->input->post('host');
-		$zone=$this->input->post('zone');
-		$data=$this->input->post('data');
+		// $zone=$this->input->post('zone');
+		// $data=$this->input->post('data');
 		
-		$sql='select * from '.$this->records_table.' where  zone like \'%'.$zone.'%\' or data=\''.$data.'\' and data!=\'\'';
+		$sql='select * from '.$this->records_table.' where  zone like \'%'.$cont.'%\' or data=\''.$cont.'\' and data!=\'\'';
 		// return $sql;
 		$query=$this->db->query($sql);
 		//$query=$this->db->get_where($this->records_table,$data);

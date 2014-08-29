@@ -4,19 +4,14 @@ class Zone extends MY_Controller {
 
 	public function __construct(){
 		parent::__construct();
-		//$this->is_login=false;
+
 		$this->load->model('zone_model');
 		$this->data['base_url']=$this->config->item('base_url');
 		$this->data['bf_url']='index.php/zone';
-		//$this->checkAdmin();
+
 	}
-	public function index($index_page=0)//lists all the zones
+	public function index($index_page=0)//lists all the zones ;0 means the first page
 	{	
-		$this->data['noshowindex']=1;
-		// $this->data['pageid']=$startnu;
-		// $pages=$this->zone_model->get_zone_nu();
-		// $all=$pages/100;
-		// $this->data['pages']=$all;
 		$zone_nu=$this->zone_model->get_zone_nu();
 		$this->data['max_page']=ceil($zone_nu/30);
 		if($index_page>$this->data['max_page']){
@@ -28,7 +23,15 @@ class Zone extends MY_Controller {
 		$this->load->view('zone/lists',$this->data);
 		$this->load->view('footer');
 	}
-	
+	public function logout(){
+		$this->deleteUserData();
+		$this->data['bf_url']='index.php/zone';
+		$this->data['item']='退出';
+		$this->load->view('header',$this->data);
+				
+		$this->load->view('zone/success',$this->data);
+		$this->load->view('footer');
+	}
 	public function add(){
 		$this->load->helper('form');
 		$this->load->library('form_validation');
@@ -99,39 +102,42 @@ class Zone extends MY_Controller {
 		}
 	}
 	public function search(){
-		$this->load->helper('form');
-		$this->load->library('form_validation');
-		$this->form_validation->set_rules('zone','zone','required');
-		$this->data['noshowsearch']=1;
-		if($this->form_validation->run()===false){
-			$this->load->view('header',$this->data);
-			$this->load->view('zone/search',$this->data);
-			$this->load->view('footer');
-		}else{
-			$res=$this->zone_model->search();
+		// $this->load->helper('form');
+		// $this->load->library('form_validation');
+		// $this->form_validation->set_rules('zone','zone','required');
+		// $this->data['noshowsearch']=1;
+		// if($this->form_validation->run()===false){
+			// $this->load->view('header',$this->data);
+			// $this->load->view('zone/search',$this->data);
+			// $this->load->view('footer');
+		// }else{
+		$cont=addslashes($_GET['q']);
+
+		$res=$this->zone_model->search($cont);
 			// echo $res;
 			// print_r($res);
-			if(!empty($res)){
-				
-				$this->data['recrds']=$res;
-				$this->load->view('header',$this->data);
-				$this->load->view('zone/result',$this->data);
-				$this->load->view('footer');
-			}else{
-				$this->data['bf_url']='index.php/zone';
-				$this->data['item']='没有搜索到任何内容';
-				$this->load->view('header',$this->data);
-				$this->load->view('zone/nores',$this->data);
-				$this->load->view('footer');
-			}
-			//search db and print result
+		if(!empty($res)){
+			
+			$this->data['recrds']=$res;
+			$this->load->view('header',$this->data);
+			$this->load->view('zone/result',$this->data);
+			$this->load->view('footer');
+		}else{
+			$this->data['bf_url']='index.php/zone';
+			$this->data['item']='没有搜索到任何内容';
+			$this->load->view('header',$this->data);
+			$this->load->view('zone/nores',$this->data);
+			$this->load->view('footer');
 		}
+			//search db and print result
+		// }
 		
 	}
 	public function manage($zone='',$op='',$recrdID='',$or_data='0'){//dns recorder operation
 		if($zone==''){
 			header('Location: ');
 		}
+		$this->data['zonepage']=TRUE;
 		$this->data['recrds']=$this->zone_model->listrecrd($zone);
 		$this->data['zone']=$zone;
 		switch($op){
@@ -244,8 +250,6 @@ class Zone extends MY_Controller {
 		}
 		
 		//print_r($recrds);
-	}
-	public function dnzManage($zone){//operation about dns recorder
 	}
 	public function zone($op='aa'){
 		echo "test";

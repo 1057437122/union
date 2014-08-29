@@ -32,6 +32,10 @@ class MY_Controller extends CI_Controller {
 			return true;
 		}
 	}
+	public function deleteUserData(){
+		$this->session->unset_userdata('userid');
+		$this->session->unset_userdata('username');
+	}
 	// public function init(){
 		// $this->admin_model->ini();
 	// }

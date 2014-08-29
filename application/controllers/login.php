@@ -18,6 +18,7 @@ class Login extends CI_Controller {
 		$this->form_validation->set_rules('username','username','required');
 		$this->form_validation->set_rules('passwd','passwd','required');
 		//session_start();
+		$this->data['loginpage']=TRUE;
 		if($this->form_validation->run()===false){
 			
 			$this->load->view('header',$this->data);
