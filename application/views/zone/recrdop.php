@@ -3,7 +3,8 @@
 list the records of the zone and manage them
 */
 ?>
-<div id="addrcd" class="op" onclick="addRcds();">添加纪录</div>
+
+<div id="addrcd" class="op">添加纪录</div>
 <div class="records">
 <table>
 	<thead>
@@ -36,13 +37,14 @@ list the records of the zone and manage them
 	</thead>               
 </table>
 </div><!-- records-->
-<?php 
-foreach($recrds as $recrd){
-?>
+
 <div class="records">
-<table>
-	<thead>
-		<tr id="rcdbody" >
+<table id="rcdbody" >
+	<tbody>
+	<?php 
+	foreach($recrds as $recrd){
+	?>
+		<tr >
 			
 			<th id="" class="rcdname" >
 			<span data-key="sub_domain" data-order="asc" class="order_key"><?php echo $recrd['host'];?></span>
@@ -74,12 +76,13 @@ foreach($recrds as $recrd){
 			</th>
 
 		</tr>
-	</thead>               
+		<?php
+				}
+			?>
+	</tbody>               
 </table>
 </div><!-- records-->
-<?php
-}
-?>
+
 <script type="javascript">
 	
 </script>

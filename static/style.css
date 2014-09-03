@@ -12,7 +12,7 @@ a:hover{color:red;}
 .r_op{float:right;}
 .zone{padding:0 3px 0;width:90%;float:left;}
 .bk{}
-.records{border-bottom:dashed 1px #D0D0D0;}
+.records{}
 .op{padding-left:30px;cursor:pointer;}
 .lft{float:left;width:70px;padding:2px;}
 .ofh{overflow:hidden;padding:5px;}
@@ -46,14 +46,16 @@ table a:hover{color:red;}
 
 /**table **/
 table tr{text-align:left;font-size:90%;}
+table tr th{border-bottom:dashed 1px #D0D0D0;}
 table tr:hover{background: #CCFFCC;    color: #000000;}
 table tr td{padding: 0.1em 0.5em 0.1em 0.5em;margin: 0.1em;vertical-align: top;}
 table tr th{padding: 0.1em 0.5em 0.1em 0.5em;margin: 0.1em;vertical-align: top;}
 table tr span{font-weight:normal;}
-.rcdname{min-width:140px;}
-.zonename{min-width:140px;}
-.rcdtype{min-width:70px;}
-.rcddata{min-width:135px;}
-.operator{min-width:170px;}
-.priority{min-width:100px;}
-.ttl{min-width:40px;}
+
+.rcdname{min-width:140px;max-width:140px;}
+.zonename{min-width:140px;max-width:140px;}
+.rcdtype{min-width:70px;max-width:70px;}
+.rcddata{min-width:135px;max-width:135px;}
+.operator{min-width:170px;max-width:170x;}
+.priority{min-width:100px;max-width:100px;}
+.ttl{min-width:40px;max-width:40px;}

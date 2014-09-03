@@ -25,6 +25,7 @@ class Zone extends MY_Controller {
 	}
 	public function logout(){
 		$this->deleteUserData();
+		$this->data['loginpage']=TRUE;
 		$this->data['bf_url']='index.php/zone';
 		$this->data['item']='退出';
 		$this->load->view('header',$this->data);

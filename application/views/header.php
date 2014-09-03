@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8">
 <link type="text/css" rel="stylesheet" href="<?php echo $base_url.'static/style.css';?>">
-<script type="javascript" src="<?php echo $base_url.'static/jquery.min.js'; ?>"></script>
-<script type="javascript" src="<?php echo $base_url.'static/record.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $base_url.'static/jquery-1.10.2.min.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $base_url.'static/record.js'; ?>"></script>
 
 <!--
 <link type="text/css" rel="stylesheet" href="<?php //echo $base_url.'static/admin/css/admin.css'?>">
