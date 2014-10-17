@@ -4,7 +4,8 @@ list the records of the zone and manage them
 */
 ?>
 
-<div id="addrcd" class="op">添加纪录</div>
+
+<a href="<?php echo $base_url.'index.php/zone/manage/'.$zone.'/add';?>">添加纪录</a>
 <div class="records">
 <table>
 	<thead>
@@ -46,16 +47,16 @@ list the records of the zone and manage them
 	?>
 		<tr >
 			
-			<th id="" class="rcdname" >
+			<th id="rcdname_<?php echo $recrd['id'];?>" class="rcdname" >
 			<span data-key="sub_domain" data-order="asc" class="order_key"><?php echo $recrd['host'];?></span>
 			</th>
 
-			<th id="" class="rcdtype" >
+			<th id="rcdtype_<?php echo $recrd['id'];?>" class="rcdtype" >
 			<span data-key="record_type" data-order="asc" class="order_key"><?php echo $recrd['type'];?></span>
 			</th>
 
 
-			<th id="" class="rcddata" >
+			<th id="rcddata_<?php echo $recrd['id'];?>" class="rcddata" >
 			<span data-key="value" data-order="asc" class="order_key"><?php echo $recrd['data'];?></span>
 			</th>
 
